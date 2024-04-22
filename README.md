@@ -1,77 +1,21 @@
 # OSU-Final-Project
-# DALL-E Image Generation and Resizing
 
-This application focuses on generating and resizing images using the DALL-E model by OpenAI. It provides a Python script `generate_and_resize_image.py` for generating images based on user prompts and resizing them to a standard size.
+## DALL-E Image Generation and Resizing
 
-## Dependencies
-Ensure you have the following dependencies installed:
-- `requests`: For making HTTP requests.
-- `shutil`: For file operations.
-- `openai`: Library for accessing the OpenAI API.
-- `cv2`: OpenCV library for image processing.
-- `os`: For interacting with the operating system.
-- `dotenv`: For loading environment variables from a `.env` file.
+This application leverages the DALL-E model by OpenAI to generate and resize images based on user prompts. The provided Python script `generate_and_resize_image.py` facilitates these functionalities.
 
-## Setup
-1. Set up an account with OpenAI and obtain an API key.
-2. Store your API key in a `.env` file in the project directory.
+### Dependencies
+- `requests`: For HTTP requests
+- `shutil`: For file operations
+- `openai`: Access to the OpenAI API
+- `cv2`: OpenCV for image processing
+- `os`: OS interactions
+- `dotenv`: Loading `.env` variables
 
-    ```bash
-    OPENAI_KEY=your_api_key_here
-    ```
+### Setup
+1. Create an OpenAI account and get an API key.
+2. Save your API key in a `.env` file within the project directory as follows:
 
-## Usage
-1. Run the `generate_and_resize_image.py` script.
-2. Input a prompt when prompted by the script.
-3. The script will generate an image based on the prompt using the DALL-E model.
-4. The generated image will be downloaded, resized to 32x32 pixels, and saved as `test_resized.jpg` in the project directory.
-
-## Example
-```bash
-python generate_and_resize_image.py
-
-# Real-Time Image Prediction Camera Application
-
-This project implements a real-time camera application with the capability to capture snapshots, predict whether the captured image is real or fake, and generate images based on user prompts using the DALL-E model. It is developed using Python and Tkinter for the GUI, OpenCV for video capture, and TensorFlow/Keras for image classification.
-
-## Features
-
-- **Real-Time Video Streaming**: The application streams video from the default camera source and displays it in real-time on the GUI window.
-
-- **Snapshot Capture**: Users can capture snapshots of the live video feed by clicking the "Snapshot" button.
-
-- **Image Prediction**: The application can predict whether the captured image (snapshot) is real or fake. It uses a pre-trained convolutional neural network (CNN) model for image classification.
-
-- **DALL-E Image Generation**: Users can input prompts, and the application generates images based on those prompts using the DALL-E model by OpenAI.
-
-## Dependencies
-
-Ensure you have the following dependencies installed:
-- `tkinter`: GUI library for Python.
-- `cv2`: OpenCV library for image and video processing.
-- `PIL`: Python Imaging Library for image processing tasks.
-- `numpy`: Library for numerical computing.
-- `tensorflow`: Deep learning framework for building and training neural networks.
-
-## Setup and Usage
-
-1. **Clone the Repository**: Clone or download the project repository to your local machine.
-
-2. **Install Dependencies**: Install the required dependencies using pip or conda.
-
-    ```bash
-    pip install numpy opencv-python pillow tensorflow
-    ```
-
-3. **Run the Application**: Execute the `gui.py` script to launch the camera application.
-
-    ```bash
-    python gui.py
-    ```
-
-4. **Interact with the Application**: Use the buttons on the GUI to capture snapshots, predict image authenticity, and generate images based on prompts.
-
-## Notes
 
 - Make sure your camera is connected and functioning properly.
 - For image prediction, the application uses a pre-trained CNN model (`img_classifier.keras`). Ensure this model file is present in the project directory.
