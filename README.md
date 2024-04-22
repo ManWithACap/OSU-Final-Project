@@ -1,4 +1,84 @@
 # OSU-Final-Project
+# DALL-E Image Generation and Resizing
+
+This application focuses on generating and resizing images using the DALL-E model by OpenAI. It provides a Python script `generate_and_resize_image.py` for generating images based on user prompts and resizing them to a standard size.
+
+## Dependencies
+Ensure you have the following dependencies installed:
+- `requests`: For making HTTP requests.
+- `shutil`: For file operations.
+- `openai`: Library for accessing the OpenAI API.
+- `cv2`: OpenCV library for image processing.
+- `os`: For interacting with the operating system.
+- `dotenv`: For loading environment variables from a `.env` file.
+
+## Setup
+1. Set up an account with OpenAI and obtain an API key.
+2. Store your API key in a `.env` file in the project directory.
+
+    ```bash
+    OPENAI_KEY=your_api_key_here
+    ```
+
+## Usage
+1. Run the `generate_and_resize_image.py` script.
+2. Input a prompt when prompted by the script.
+3. The script will generate an image based on the prompt using the DALL-E model.
+4. The generated image will be downloaded, resized to 32x32 pixels, and saved as `test_resized.jpg` in the project directory.
+
+## Example
+```bash
+python generate_and_resize_image.py
+
+# Real-Time Image Prediction Camera Application
+
+This project implements a real-time camera application with the capability to capture snapshots, predict whether the captured image is real or fake, and generate images based on user prompts using the DALL-E model. It is developed using Python and Tkinter for the GUI, OpenCV for video capture, and TensorFlow/Keras for image classification.
+
+## Features
+
+- **Real-Time Video Streaming**: The application streams video from the default camera source and displays it in real-time on the GUI window.
+
+- **Snapshot Capture**: Users can capture snapshots of the live video feed by clicking the "Snapshot" button.
+
+- **Image Prediction**: The application can predict whether the captured image (snapshot) is real or fake. It uses a pre-trained convolutional neural network (CNN) model for image classification.
+
+- **DALL-E Image Generation**: Users can input prompts, and the application generates images based on those prompts using the DALL-E model by OpenAI.
+
+## Dependencies
+
+Ensure you have the following dependencies installed:
+- `tkinter`: GUI library for Python.
+- `cv2`: OpenCV library for image and video processing.
+- `PIL`: Python Imaging Library for image processing tasks.
+- `numpy`: Library for numerical computing.
+- `tensorflow`: Deep learning framework for building and training neural networks.
+
+## Setup and Usage
+
+1. **Clone the Repository**: Clone or download the project repository to your local machine.
+
+2. **Install Dependencies**: Install the required dependencies using pip or conda.
+
+    ```bash
+    pip install numpy opencv-python pillow tensorflow
+    ```
+
+3. **Run the Application**: Execute the `gui.py` script to launch the camera application.
+
+    ```bash
+    python gui.py
+    ```
+
+4. **Interact with the Application**: Use the buttons on the GUI to capture snapshots, predict image authenticity, and generate images based on prompts.
+
+## Notes
+
+- Make sure your camera is connected and functioning properly.
+- For image prediction, the application uses a pre-trained CNN model (`img_classifier.keras`). Ensure this model file is present in the project directory.
+- The DALL-E image generation feature requires an internet connection and an API key for accessing the OpenAI API. Make sure to set up an account with OpenAI and obtain an API key.
+- The application window is resizable and can be adjusted according to the user's preferences.
+
+
 # Image Classifier using Convolutional Neural Networks
 
 This project is aimed at building a convolutional neural network (CNN) to classify images into real and fake categories. The dataset consists of images of real and fake objects.
@@ -95,10 +175,5 @@ for i, pred in enumerate(predictions):
 
 Image 1 prediction: 0.0003023147 (Fake)
 Image 2 prediction: 0.0000000217 (Real)
-Image 3 prediction: 0.0000016659 (Real)
-Image 4 prediction: 0.0000041612 (Real)
-Image 5 prediction: 0.0000000001 (Real)
-Image 6 prediction: 0.0000958420 (Real)
-Image 7 prediction: 0.0000008647 (Real)
-Image 8 prediction: 0.0000013811 (Real)
+
 
