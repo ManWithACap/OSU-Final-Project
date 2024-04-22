@@ -16,6 +16,38 @@ This application leverages the DALL-E model by OpenAI to generate and resize ima
 1. Create an OpenAI account and get an API key.
 2. Save your API key in a `.env` file within the project directory as follows:
 
+OPENAI_KEY=your_api_key_here
+
+### Usage
+- Execute the script `generate_and_resize_image.py`.
+- Enter a prompt when prompted.
+- An image will be generated and resized to 32x32 pixels, then saved as `test_resized.jpg`.
+
+#### Example Command
+bash
+python generate_and_resize_image.py
+
+## Real-Time Image Prediction Camera Application
+
+This project develops a real-time camera application that identifies real or fake images and generates new images based on user prompts. It incorporates Python, Tkinter, OpenCV, and TensorFlow/Keras.
+
+### Features
+- Real-time video streaming
+- Snapshot capture and image prediction
+- Image generation using DALL-E
+
+### Dependencies
+- tkinter
+- cv2
+- PIL
+- numpy
+- tensorflow
+
+### Setup and Usage
+1. Clone the repository.
+2. Install dependencies:
+   ```bash
+   pip install numpy opencv-python pillow tensorflow
 
 - Make sure your camera is connected and functioning properly.
 - For image prediction, the application uses a pre-trained CNN model (`img_classifier.keras`). Ensure this model file is present in the project directory.
@@ -38,7 +70,7 @@ This project utilizes the following Python libraries:
 
 Ensure these dependencies are installed before running the code.
 
-## Dataset
+## Dataset Structure
 
 The dataset is organized into training and testing sets, each containing real and fake images. The images are stored in separate directories:
 
